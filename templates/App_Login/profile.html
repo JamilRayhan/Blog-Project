@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title_block %} Profile {% endblock  %}
+{% block body_block %}
+<h2> {{user.first_name}}'s Profile </h2> 
+<p>Username: {{user.username}}</p>
+<p>Email: {{user.email}}</p>
+<p>Name: {{user.first_name}} {{user.last_name}}</p>
+<br>
+<a href="{% url 'App_Login:user_change'%}" class = "btn btn-danger btn-sm">Edit Profile Info</a>
+<a href="{% url 'App_Login:pass_change'%}" class = "btn btn-danger btn-sm">Change Password</a>
+{% endblock  %}
+
