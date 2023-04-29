@@ -38,9 +38,21 @@
                 @{{ user.username }}
               </a>
               <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="{% url 'App_Login:profile' %}">Your Profile</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="{% url 'App_Login:logout' %}">Logout</a></li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'App_Blog:create_blog' %}">Write Blog</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'App_Login:profile' %}">Your Profile</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'App_Login:logout' %}">Logout</a>
+                </li>
               </ul>
             </li>
             {% else %}
